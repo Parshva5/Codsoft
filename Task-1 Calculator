@@ -4,13 +4,8 @@ root = Tk()
 root.title("simple Calculator")
 
 
-
-#--------------------------------- Text Bar --------------------------------------
-
 e = Entry(root, width=24, borderwidth=2, font=('cambria', 18, 'bold'))
 e.grid(row=0, column=0, columnspan=4)
-
-#------------------------------ Defining the Buttons------------------------------
 
 def button_click(number):
     current = e.get()
@@ -66,7 +61,6 @@ def button_equ():
     if math == "Division":
         e.insert(0, f_num / int(second_number))
 
-#------------------------------ Number Buttons -----------------------------------
 
 mybtn_1 = Button(root, text="1", font = ('cambria', 15), padx=30, pady=20, command= lambda: button_click(1))
 mybtn_2 = Button(root, text="2", font = ('cambria', 15), padx=30, pady=20, command= lambda: button_click(2))
@@ -78,7 +72,6 @@ mybtn_7 = Button(root, text="7", font = ('cambria', 15), padx=30, pady=20, comma
 mybtn_8 = Button(root, text="8", font = ('cambria', 15), padx=30, pady=20, command= lambda: button_click(8))
 mybtn_9 = Button(root, text="9", font = ('cambria', 15), padx=30, pady=20, command= lambda: button_click(9))
 mybtn_0 = Button(root, text="0", font = ('cambria', 15), padx=30, pady=20, command= lambda: button_click(0))
-#------------------------------ Function Buttons ---------------------------------
 
 mybtn_add = Button(root, text="+", font = ('cambria', 15), padx=30, pady=20, bg="Light blue", command= button_add)
 mybtn_sub = Button(root, text="-", font = ('cambria', 15), padx=31, pady=20, bg="Light blue", command= button_sub)
@@ -87,8 +80,6 @@ mybtn_div = Button(root, text="/", font = ('cambria', 15), padx=30, pady=20, bg=
 mybtn_cle = Button(root, text="Clear", font = ('cambria', 15), padx=99, pady=20, bg="light grey", command= button_cle)
 mybtn_dec = Button(root, text=".", font = ('cambria', 15), padx=34, pady=20, bg="Light blue", command= button_click)
 mybtn_equ = Button(root, text="=", font = ('cambria', 15), padx=72, pady=20, bg="Light grey", command= button_equ)
-
-#------------------------------ Placing Number Buttons ----------------------------
 
 mybtn_1.grid(row=4, column=0)
 mybtn_2.grid(row=4, column=1)
@@ -102,8 +93,6 @@ mybtn_6.grid(row=3, column=2)
 mybtn_7.grid(row=2, column=0)
 mybtn_8.grid(row=2, column=1)
 mybtn_9.grid(row=2, column=2)
-
-#------------------------------ Placing Function Buttons --------------------------
 
 mybtn_add.grid(row=4, column=3)
 mybtn_sub.grid(row=3, column=3)
